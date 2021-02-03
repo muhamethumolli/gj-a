@@ -7,7 +7,7 @@ import { UserModel } from '../../../interfaces/User.model';
 
 const Profile = ({ user }: { user: UserModel }) => {
   return (
-    <Layout title="Profile" url="/Profile">
+    <Layout title="Profile" url={`/profile/${user.id}`}>
       <ProfileHeader name={user?.name} username={user?.username} />
       <ProfileContent {...user} />
     </Layout>
