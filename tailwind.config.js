@@ -8,7 +8,6 @@ module.exports = {
     screens: {
       sm: '640px',
       md: '768px',
-      xl: '1024px'
     },
     extend: {
       boxShadow: {
