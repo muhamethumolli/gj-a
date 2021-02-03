@@ -5,3 +5,6 @@ export * from './components/ProfileHeader.types';
 export * from './components/ProfileUser.types';
 export * from './components/UserPostsContent.types';
 export * from './components/PostCardHeader.types';
+export * from './components/PostCard.types';
+export * from './components/Post.types';
+export * from './components/PostCardContent.types';
