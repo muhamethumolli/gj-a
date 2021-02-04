@@ -8,3 +8,6 @@ export * from './components/PostCardHeader.types';
 export * from './components/PostCard.types';
 export * from './components/Post.types';
 export * from './components/PostCardContent.types';
+export * from './components/Comments.types';
+export * from './components/CommentsContent.types';
+export * from './components/Comment.types';

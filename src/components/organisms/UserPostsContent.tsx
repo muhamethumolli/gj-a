@@ -7,7 +7,7 @@ import PostCard from './PostCard';
 import { PostModel } from '../../interfaces/Post.model';
 
 const UserPostsContent: FC<UserPostsContentProps> = ({ name, username }) => {
-  const [show, setShow] = useState<number>(0);
+  const [show, setShow] = useState<number>(1);
   const [posts, setPosts] = useState<Array<PostModel>>([]);
   const {
     query: { profileId }
@@ -32,11 +32,18 @@ const UserPostsContent: FC<UserPostsContentProps> = ({ name, username }) => {
   return (
     <section className="py-20">
       <Container>
-        {posts.map((el,key) => key <= show && (
-          <div className="pb-12" key={`${el.id}-${el.userId}`}>
-            <PostCard user={{ name, username }} post={el} />
-          </div>
-        ))}
+        {posts.map(
+          (el, key) =>
+            key <= show && (
+              <div className="pb-12" key={`${el.id}-${el.userId}`}>
+                <PostCard
+                  user={{ name, username }}
+                  post={el}
+                  withInput={false}
+                />
+              </div>
+            )
+        )}
         <div className="flex justify-center">
           {show <= posts.length && (
             <button
