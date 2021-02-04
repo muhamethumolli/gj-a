@@ -10,10 +10,10 @@ const PostCardHeader: FC<PostCardHeaderProps> = ({ name, username, id }) => {
         <div className="flex flex-col pl-6">
           {id ? (
             <>
-              <Link href={`profile/${id}`}>
+              <Link href={`/profile/${id}`}>
                 <a className="cursor-pointer text-xl leading-4">{name}</a>
               </Link>
-              <Link href={`profile/${id}`}>
+              <Link href={`/profile/${id}`}>
                 <a className="text-lg leading-2 text-gray-400 mt-2">
                   @{username}
                 </a>
