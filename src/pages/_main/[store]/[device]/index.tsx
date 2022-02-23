@@ -1,17 +1,17 @@
 import { GetStaticProps } from 'next';
 import React, { useState } from 'react';
-import Post from '../components/organisms/Post';
-import Container from '../components/templates/Container';
-import Layout from '../components/templates/Layout';
-import { UAType } from '../interfaces/IUserAgent';
+import Post from '../../../../components/organisms/Post';
+import Container from '../../../../components/templates/Container';
+import Layout from '../../../../components/templates/Layout';
+import { UAType } from '../../../../interfaces/IUserAgent';
 // import { PostModel } from '../interfaces/Post.model';
 
-// export async function getStaticPaths() {
-//   return {
-//     paths: [],
-//     fallback: 'blocking'
-//   };
-// }
+export async function getStaticPaths() {
+  return {
+    paths: [],
+    fallback: 'blocking'
+  };
+}
 
 export const getStaticProps: GetStaticProps<
   {},
@@ -104,7 +104,7 @@ export const getStaticProps: GetStaticProps<
 };
 
 const Home = ({ posts, ...rest }: any) => {
-  console.log(rest,"test-2");
+  console.log(rest,"test-3");
   const [show, setShow] = useState<number>(10);
 
   const showMore = () => setShow(show + 10);
